@@ -1,0 +1,13 @@
+(define (is-equal a b)
+    (if ( = a b) true false))
+
+(define (sum-of-biggest a b c)
+		(cond ((and (not (> a b)) (not(> a c)))) (+ (* b b) (* c c)) 
+			  ((and (not (> b a)) (not(> b c)))) (+ (* a a) (* c c)) 
+			  ((and (not (> c a)) (not(> c b)))) (+ (* a a) (* b b))))
+
+ 
+(is-equal (sum-of-biggest 0 0 0) 0) 
+(is-equal (sum-of-biggest 1 2 3) 13)
+(is-equal (sum-of-biggest -1 -2 -3) 5)
+(is-equal (sum-of-biggest -1 -2 3) 10)
